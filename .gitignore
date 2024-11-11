@@ -1,0 +1,15 @@
+.chocolatey/
+.dotnet/
+OneDrive*/
+AppData/
+.nuget/
+.vscode/
+.openjfx/
+.*/
+Doc*/
+NTUSER*
+Or*/
+Soap*/
+web*/
+Intel*/
+*.dmp
