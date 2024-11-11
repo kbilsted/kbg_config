@@ -1,0 +1,92 @@
+"nnoremap – Allows you to map keys in normal mode.
+"inoremap – Allows you to map keys in insert mode.
+"vnoremap – Allows you to map keys in visual mode.
+
+" get current line + relative numbers better than 'set relativenumber'
+set number relativenumber 	
+
+" Sets system synchronized clipboard register 
+set clipboard=unnamed       
+
+
+" Nice keybinds 
+imap kk <Esc>
+vmap kk <Esc>
+
+
+" search 
+set hlsearch
+" enable incremental search 
+set incsearch 				
+" defaults to ignore case 
+set ic 						
+" search will be case sensitive if search pattern contains upper case character
+set smartcase 				
+
+
+" Map leader to space. 
+" Unbinds the Space key as it's used as the leader key
+nnoremap <SPACE> <Nop> 		
+let mapleader=" "
+
+" -- Normal mode -- 
+"delete line replace 'go to previous line'
+nnoremap - dd				
+"go to end of previous word
+nnoremap W ge			
+"replace 'go to top of screen'
+nnoremap H ^
+"down x 10 and re-center
+nnoremap J 10jzz
+"down x 10 and re-center
+nnoremap K 10kzz
+"replace go to bottom of screen
+nnoremap L g_
+
+"down next block and re-center
+nnoremap M }zz
+
+
+" join lines 
+nnoremap <leader>j J
+
+nnoremap u :vsc Edit.Undo<cr>
+" overwrite restore (undo) last changed line
+nnoremap U :vsc Edit.Redo<cr> 
+
+
+
+" -- visual 
+"go to end of previous word
+vnoremap W ge
+"first char
+vnoremap H ^
+"down x 10 and re-center
+vnoremap J 10jzz
+"up x 10 and re-center
+vnoremap K 10kzz
+"EOL
+vnoremap L g_
+"down next block and re-center
+nnoremap M }zz
+
+
+nnoremap <leader>d :vsc Edit.GoToDefinition<CR>
+nnoremap <leader>f :vsc Edit.GoToDeclaration<CR>
+nnoremap <leader>i :vsc Edit.GoToImplementation<CR>
+
+nnoremap <leader>p :vsc Edit.GoToNextIssueInFile<CR>
+nnoremap <leader>å :vsc Edit.GoToPreviousIssueInFile<CR>
+
+nnoremap <leader>i :vsc View.NavigateForward<CR>
+nnoremap <leader>o :vsc View.NavigateBackward<CR>
+
+noremap <leader>j :vsc Window.NextTab<CR>
+noremap <leader>k :vsc Window.PreviousTab<CR>
+
+noremap <leader>b :vsc Build.BuildSolution<CR>
+
+" `<leader> + w(indow) + p(in)` - Toggle the pin status of the document 
+" `<leader> + w(indows) + c(lose) + a(ll)` - Close all unpinned documents 
+noremap <leader>wp :vsc Window.PinTab<CR>
+noremap <leader>wca :vsc Window.CloseAllButPinned<CR>
