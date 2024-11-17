@@ -1,6 +1,8 @@
-"nnoremap – Allows you to map keys in normal mode.
-"inoremap – Allows you to map keys in insert mode.
-"vnoremap – Allows you to map keys in visual mode.
+" cd c:\users\<user>
+" git init 
+" git config --global --add safe.directory C:/Users/<user>
+" git remote add origin https://github.com/kbilsted/vim_config.git
+" git pull origin master
 
 " get current line + relative numbers better than 'set relativenumber'
 set number relativenumber 	
@@ -8,18 +10,18 @@ set number relativenumber
 " Sets system synchronized clipboard register 
 set clipboard=unnamed       
 
+" The number of screen lines to keep above and below the cursor.
+set scrolloff=9 
 
-" Nice keybinds 
-imap kk <Esc>
-vmap kk <Esc>
-
+inoremap jj <Esc>
+vnoremap jj <Esc>
 
 " search 
-set hlsearch
+" DONT SET 'set hlsearch' since we have to clear highlight again
 " enable incremental search 
 set incsearch 				
-" defaults to ignore case 
-set ic 						
+" defaults to ignore case search
+set ignorecase 						
 " search will be case sensitive if search pattern contains upper case character
 set smartcase 				
 
@@ -29,22 +31,39 @@ set smartcase
 nnoremap <SPACE> <Nop> 		
 let mapleader=" "
 
+
+" insert {},[],() easy
+inoremap jk {<esc>li
+inoremap jl [<esc>li
+inoremap jæ (<esc>li
+inoremap ææ <esc>A;
+inoremap øø <Esc>/[)}"'\]>]<CR>:nohl<CR>a<space>
+
 " -- Normal mode -- 
-"delete line replace 'go to previous line'
+"delete line -- replace 'go to previous line'
 nnoremap - dd				
+
 "go to end of previous word
 nnoremap W ge			
-"replace 'go to top of screen'
-nnoremap H ^
+vnoremap W ge			
+
+"delete word  - replace 'go to top of screen' - tempting to remap to BOL - but we have 'A' or 'C' for that
+nnoremap H "_daw	
+
 "down x 10 and re-center
 nnoremap J 10jzz
-"down x 10 and re-center
-nnoremap K 10kzz
-"replace go to bottom of screen
-nnoremap L g_
+vnoremap J 10jzz
 
-"down next block and re-center
+" down x 10 and re-center
+nnoremap K 10kzz
+vnoremap K 10kzz
+
+" replace go to bottom of screen
+nnoremap L :vsc Edit.GoToImplementation<CR>
+
+" down next block and re-center
 nnoremap M }zz
+vnoremap M }zz
 
 
 " join lines 
@@ -58,17 +77,10 @@ nnoremap U :vsc Edit.Redo<cr>
 
 " -- visual 
 "go to end of previous word
-vnoremap W ge
 "first char
 vnoremap H ^
-"down x 10 and re-center
-vnoremap J 10jzz
-"up x 10 and re-center
-vnoremap K 10kzz
 "EOL
 vnoremap L g_
-"down next block and re-center
-nnoremap M }zz
 
 
 nnoremap <leader>d :vsc Edit.GoToDefinition<CR>
