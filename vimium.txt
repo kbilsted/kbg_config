@@ -1,0 +1,39 @@
+#
+# Vimium browser plugin key mappings
+#
+# by Kasper B. Graversen, 2024
+#
+#
+# design philosophy 
+#   o existing mappings are really good
+#   o prefer non-shift over shift bindings
+#   o prefer frequent used operations on left hand 
+#     - (easy to reach when using a mouse)
+
+# we unmap these as otherwise it is difficult to select stuff with shift and j/k - as it change tab
+unmap J
+unmap K
+
+map w nextTab
+map e visitPreviousTab
+map b previousTab
+
+map ' Marks.activateGotoMode
+
+# (a)mmend urlmap ' Marks.activateGotoMode
+map a Vomnibar.activateEditUrl
+
+# more of existing mappings 
+map D scrollFullPageDown
+map U scrollFullPageUp
+
+# (g)o (b)ookmarks - more rare than going back tab
+map gb Vomnibar.activateBookmarks
+
+
+# available non-shift keys 
+map . goForward
+map , goBack
+
+# non-US keyboard mappings to same spot as on US keyboard
+map - enterFindMode
