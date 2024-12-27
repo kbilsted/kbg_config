@@ -7,7 +7,6 @@
 /keymapper.conf
 _viminfo
 AppData/*
-!AppData/Local/Packages/*
 Desktop
 Documents/*
 !Documents/WindowsPowerShell
@@ -24,3 +23,11 @@ Searches
 Soap*/
 source/repos/
 web*/
+Games
+Saved Games
+VirtualBox VMs
+eclipse
+dotnet
+Zomboid
+*.log
+Documents/PowerShell/Modules
