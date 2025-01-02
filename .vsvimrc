@@ -190,6 +190,9 @@ vnoremap K 19kzz
 nnoremap M }zz
 vnoremap M }zz
 
+" center search next
+nnoremap n nzz
+nnoremap N Nzz
 
 
 
