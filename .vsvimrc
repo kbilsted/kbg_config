@@ -176,6 +176,7 @@ nnoremap H :vsc Edit.FindAllReference<CR>
 
 " replace go to bottom of screen
 nnoremap L :vsc Edit.GoToDefinition<CR>
+nnoremap gd :vsc Edit.GoToDefinition<CR>
 " join lines
 inoremap <C-j> <Esc>Ji
 inoremap <C-S-j> <Esc>kJi
