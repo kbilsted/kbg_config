@@ -241,8 +241,7 @@ nnoremap <leader>gtb :vsc Edit.GotoBraceExtend<CR>
 nnoremap <leader>gtsb :vsc ResourceExplorer.GoToSearchBar<CR>
 noremap <leader>gq :vsc Window.ActivateQuickLaunch<CR>
 
-" (d)ebug operations
-noremap <leader>db :vsc Debug.EnableBreakpoint<CR>
+nnoremap <leader>db :vsc Debug.EnableBreakpoint<CR>
 
 
 " more logical to use [], but this is easier to reach and on NORDIC layout ] is a deadkey
