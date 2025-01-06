@@ -271,8 +271,9 @@ nnoremap <leader>wca :vsc Window.CloseAllButPinned<CR>
 " -- normal mode editing --
 nnoremap <leader>o myo<Esc>`y
 nnoremap <leader>O myO<Esc>`y
-nnoremap oo myo<Esc>`y
-nnoremap OO myO<Esc>`y
+" do not work in vsvim since if you press o and quickly ctrl-v then it paste before inserting a new line
+"nnoremap oo myo<Esc>`y
+"nnoremap OO myO<Esc>`y
 nnoremap <leader>J J
 vnoremap <leader>J J
 nnoremap <leader>; A;<Esc>
