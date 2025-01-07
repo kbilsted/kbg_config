@@ -139,6 +139,96 @@ nnoremap r2j "a2ddPj
 nnoremap r3j "a3ddPj
 
 
+"delete line -- replace 'go to previous line'
+nnoremap - dd
+" -- search forward easy using non-us keyboard - also makes , and ; usable for other mappings
+" Lowercase letters
+nnoremap -a /a<CR>
+nnoremap -b /b<CR>
+nnoremap -c /c<CR>
+nnoremap -d /d<CR>
+nnoremap -e /e<CR>
+nnoremap -f /f<CR>
+nnoremap -g /g<CR>
+nnoremap -h /h<CR>
+nnoremap -i /i<CR>
+nnoremap -j /j<CR>
+nnoremap -k /k<CR>
+nnoremap -l /l<CR>
+nnoremap -m /m<CR>
+nnoremap -n /n<CR>
+nnoremap -o /o<CR>
+nnoremap -p /p<CR>
+nnoremap -q /q<CR>
+nnoremap -r /r<CR>
+nnoremap -s /s<CR>
+nnoremap -t /t<CR>
+nnoremap -u /u<CR>
+nnoremap -v /v<CR>
+nnoremap -w /w<CR>
+nnoremap -x /x<CR>
+nnoremap -y /y<CR>
+nnoremap -z /z<CR>
+" Uppercase letters
+nnoremap -A /A<CR>
+nnoremap -B /B<CR>
+nnoremap -C /C<CR>
+nnoremap -D /D<CR>
+nnoremap -E /E<CR>
+nnoremap -F /F<CR>
+nnoremap -G /G<CR>
+nnoremap -H /H<CR>
+nnoremap -I /I<CR>
+nnoremap -J /J<CR>
+nnoremap -K /K<CR>
+nnoremap -L /L<CR>
+nnoremap -M /M<CR>
+nnoremap -N /N<CR>
+nnoremap -O /O<CR>
+nnoremap -P /P<CR>
+nnoremap -Q /Q<CR>
+nnoremap -R /R<CR>
+nnoremap -S /S<CR>
+nnoremap -T /T<CR>
+nnoremap -U /U<CR>
+nnoremap -V /V<CR>
+nnoremap -W /W<CR>
+nnoremap -X /X<CR>
+nnoremap -Y /Y<CR>
+nnoremap -Z /Z<CR>
+" Digits
+nnoremap -0 /0<CR>
+nnoremap -1 /1<CR>
+nnoremap -2 /2<CR>
+nnoremap -3 /3<CR>
+nnoremap -4 /4<CR>
+nnoremap -5 /5<CR>
+nnoremap -6 /6<CR>
+nnoremap -7 /7<CR>
+nnoremap -8 /8<CR>
+nnoremap -9 /9<CR>
+" Common symbols
+nnoremap -- /-<CR>
+nnoremap -_ /_<CR>
+nnoremap -= /=<CR>
+nnoremap -+ /+<CR>
+nnoremap -[ /[<CR>
+nnoremap -] /]<CR>
+nnoremap -{ /{<CR>
+nnoremap -} /}<CR>
+nnoremap -\( /\(<CR>
+nnoremap -\) /\)<CR>
+nnoremap -\ /\\<CR>
+nnoremap -| /|<CR>
+nnoremap -; /;<CR>
+nnoremap -: /:<CR>
+nnoremap -, /,<CR>
+nnoremap -. /.<CR>
+nnoremap -' /'<CR>
+nnoremap -" /"<CR>
+nnoremap -` /`<CR>
+nnoremap -~ /~<CR>
+
 
 
 
@@ -164,8 +254,6 @@ nnoremap U :vsc Edit.Redo<cr>
 vnoremap y ygv<esc>
 
 
-"delete line -- replace 'go to previous line'
-nnoremap - dd
 
 
 
