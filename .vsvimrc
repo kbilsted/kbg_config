@@ -315,9 +315,11 @@ nnoremap <leader>b :vsc Build.BuildSolution<CR>
 " (r)un
 nnoremap <leader>r :vsc Debug.Start<CR>
 
-" (c)ode operations
+" -- (c)ode operations
 nnoremap <leader>cr :vsc Refactor.Rename<CR>
 nnoremap <leader>cb :vsc Build.RebuildSolution<CR>
+"(c)code (d)ollar - add $ infront of string
+nnoremap <leader>cd mdF"i$<Esc>`dl
 
 
 nnoremap <leader>m :vsc Edit.NextMethod<cr>
