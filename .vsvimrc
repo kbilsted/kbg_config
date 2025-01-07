@@ -55,9 +55,14 @@ nnoremap <C-s> <Esc>:update<CR>
 "in vim already: b = ()
 "in vim already: B = {}
 " (c)hange (a)round (q)uote 
+nnoremap cq "aci"
+nnoremap cb "acib
+vnoremap cb cib
+nnoremap cB "aciB
 nnoremap ciq "aci"
 nnoremap caq "aca"
-nnoremap diq "adi"
+nnoremap dq "adi"
+vnoremap dq di"
 nnoremap daq "ada"
 nnoremap yaq ya"
 nnoremap yiq yi"
@@ -67,10 +72,10 @@ nnoremap cip "aci'
 nnoremap cap "aca'
 nnoremap dip "adi'
 nnoremap dap "ada'
-nnoremap yap ya'
 nnoremap yip yi'
 
 " (d)elete (i)nside (a)rray - we copy to a-register rather than rely on c/d being redefined to not alter the content
+nnoremap ca "aci[
 nnoremap cia "aci[
 nnoremap caa "aca[
 nnoremap dia "adi[
@@ -81,21 +86,16 @@ nnoremap yia yi[
 
 "
 " -- delete and change -- 
+" C/D/x works as cut in visual-mode  (requires no mapping)
+" C/D/X works as delete/cut-to-reg-a in normal-mode
 nnoremap x "_x
 nnoremap X "_X
-" C/D works as cut whereas in normal-mode it works as delete/cut-to-reg-a
-" leave my unnamed alone
 nnoremap c "ac
-vnoremap c "ac
 nnoremap C "aC
-vnoremap C "aC
 nnoremap d "ad
-vnoremap d "ad
 nnoremap D "aD
-vnoremap D "aD
 nnoremap <leader>p "ap
 nnoremap <leader>P "aP
-
 
 
 
@@ -132,10 +132,11 @@ nnoremap r3w "a3dawP
 nnoremap r4w "a4dawP
 " line
 " change line (cc) and delete line (dd) are unchanged
-" (r)eplace (l)ine
-nnoremap rl "addPj
-nnoremap r2l "a2ddPj
-nnoremap r3l "a3ddPj
+" (r)eplace (j) for down
+nnoremap rj "addPj
+nnoremap rk k"addPj
+nnoremap r2j "a2ddPj
+nnoremap r3j "a3ddPj
 
 
 
