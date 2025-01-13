@@ -318,8 +318,12 @@ nnoremap <leader>r :vsc Debug.Start<CR>
 " -- (c)ode operations
 nnoremap <leader>cr :vsc Refactor.Rename<CR>
 nnoremap <leader>cb :vsc Build.RebuildSolution<CR>
+nnoremap <leader>cf :vsc Edit.Formatdocument<CR>
 "(c)code (d)ollar - add $ infront of string
 nnoremap <leader>cd mdF"i$<Esc>`dl
+
+" remap vim command format section to vs
+nnoremap gq :vsc Edit.Formatdocument<CR>
 
 
 nnoremap <leader>m :vsc Edit.NextMethod<cr>
