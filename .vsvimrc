@@ -316,6 +316,8 @@ nnoremap <leader>b :vsc Build.BuildSolution<CR>
 nnoremap <leader>r :vsc Debug.Start<CR>
 
 " -- (c)ode operations
+nnoremap <leader>cc :vsc Edit.CommentSelection<CR>
+nnoremap <leader>cu :vsc Edit.UncommentSelection<CR>
 nnoremap <leader>cr :vsc Refactor.Rename<CR>
 nnoremap <leader>cb :vsc Build.RebuildSolution<CR>
 nnoremap <leader>cf :vsc Edit.Formatdocument<CR>
