@@ -140,7 +140,8 @@ nnoremap r3j "a3ddPj
 
 
 "delete line -- replace 'go to previous line'
-nnoremap - dd
+"nnoremap - dd
+
 " -- search forward easy using non-us keyboard - also makes , and ; usable for other mappings
 " Lowercase letters
 nnoremap -a /a<CR>
@@ -281,13 +282,13 @@ nnoremap M }zz
 vnoremap M }zz
 
 " center search next
-nnoremap n nzz
-nnoremap N Nzz
+" confusing since first find does not move
+"nnoremap n nzz
+"nnoremap N Nzz
 
 
 
 
-" join lines
 nnoremap <leader>q :vsc File.Close<CR>
 nnoremap <leader>w :vsc File.Exit<CR>
 
@@ -328,6 +329,7 @@ nnoremap <leader>cd mdF"i$<Esc>`dl
 nnoremap gq :vsc Edit.Formatdocument<CR>
 
 
+nnoremap <leader>t :vsc Edit.NavigateTo<cr>
 nnoremap <leader>m :vsc Edit.NextMethod<cr>
 nnoremap <leader>M :vsc Edit.PreviousMethod<cr>
 
@@ -368,12 +370,19 @@ nnoremap <leader>wca :vsc Window.CloseAllButPinned<CR>
 " -- normal mode editing --
 nnoremap <leader>o myo<Esc>`y
 nnoremap <leader>O myO<Esc>`y
+nnoremap <leader>; A;<Esc>
+
+nnoremap <CR> i<CR><Esc>
+
 " do not work in vsvim since if you press o and quickly ctrl-v then it paste before inserting a new line
+" also it makes single o slow as it waits for more input
 "nnoremap oo myo<Esc>`y
 "nnoremap OO myO<Esc>`y
+
+" join lines
 nnoremap <leader>J J
 vnoremap <leader>J J
-nnoremap <leader>; A;<Esc>
+
 
 nnoremap confe :e C:\Users\t01kagr\.vsvimrc<CR>
 nnoremap confr :source C:\Users\t01kagr\.vsvimrc<CR>
