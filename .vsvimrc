@@ -17,9 +17,9 @@ set number relativenumber
 set clipboard=unnamed
 
 " The number of screen lines to keep above and below the cursor.
-set scrolloff=10
+set scrolloff=11
 
-set timeoutlen=900
+" set timeoutlen=900
 
 " -- search --
 "DONT SET 'set hlsearch' since we have to clear highlight again
@@ -224,7 +224,7 @@ nnoremap -| /|<CR>
 nnoremap -; /;<CR>
 nnoremap -: /:<CR>
 nnoremap -, /,<CR>
-nnoremap -. /.<CR>
+nnoremap -. /\.<CR>
 nnoremap -' /'<CR>
 nnoremap -" /"<CR>
 nnoremap -` /`<CR>
@@ -278,8 +278,12 @@ nnoremap K 19kzz
 vnoremap K 19kzz
 
 " down next block and re-center
-nnoremap M }zz
-vnoremap M }zz
+nnoremap m }zz
+vnoremap m }zz
+
+" we navigate more than marking (m)
+nnoremap M m
+nnoremap M m
 
 " center search next
 " confusing since first find does not move
@@ -373,6 +377,7 @@ nnoremap <leader>O myO<Esc>`y
 nnoremap <leader>; A;<Esc>
 
 nnoremap <CR> i<CR><Esc>
+nnoremap <BS> X
 
 " do not work in vsvim since if you press o and quickly ctrl-v then it paste before inserting a new line
 " also it makes single o slow as it waits for more input
