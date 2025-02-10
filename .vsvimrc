@@ -55,14 +55,14 @@ nnoremap <C-s> <Esc>:update<CR>
 "in vim already: b = ()
 "in vim already: B = {}
 " (c)hange (a)round (q)uote 
-nnoremap cb "acib
-vnoremap cb cib
+nnoremap cb f)"acib
+vnoremap cb f)cib
 nnoremap cB "aciB
 nnoremap cq "aci"
 nnoremap ciq "aci"
 nnoremap caq "aca"
-nnoremap dq "adi"
-vnoremap dq di"
+nnoremap dq f""adi"
+vnoremap dq f"di"
 nnoremap daq "ada"
 nnoremap yaq ya"
 nnoremap yiq yi"
@@ -217,8 +217,8 @@ nnoremap -[ /[<CR>
 nnoremap -] /]<CR>
 nnoremap -{ /{<CR>
 nnoremap -} /}<CR>
-nnoremap -\( /\(<CR>
-nnoremap -\) /\)<CR>
+nnoremap -( /(<CR>
+nnoremap -) /)<CR>
 nnoremap -\ /\\<CR>
 nnoremap -| /|<CR>
 nnoremap -; /;<CR>
@@ -229,6 +229,7 @@ nnoremap -' /'<CR>
 nnoremap -" /"<CR>
 nnoremap -` /`<CR>
 nnoremap -~ /~<CR>
+nnoremap -<Space> /<Space><CR>
 
 
 
@@ -269,13 +270,14 @@ nnoremap L :vsc Edit.GoToDefinition<CR>
 nnoremap gd :vsc Edit.GoToDefinition<CR>
 " join lines
 inoremap <C-j> <Esc>Ji
+nnoremap <C-j> J
 inoremap <C-S-j> <Esc>kJi
 
 " up/down and re-center (<c-d> is too much scrolling)
-nnoremap J 19jzz
-vnoremap J 19jzz
-nnoremap K 19kzz
-vnoremap K 19kzz
+nnoremap J 13jzz
+vnoremap J 13jzz
+nnoremap K 13kzz
+vnoremap K 13kzz
 
 " down next block and re-center
 nnoremap m }zz
@@ -294,7 +296,7 @@ nnoremap M m
 
 
 nnoremap <leader>q :vsc File.Close<CR>
-nnoremap <leader>w :vsc File.Exit<CR>
+"nnoremap <leader>w :vsc File.Exit<CR>
 
 "##  nnoremap ge :vsc Resharper.Resharper_GotoNextErrorInSolution<CR>
 "##  nnoremap gh :vsc Resharper.Resharper_GotoNextHighlight<CR>
@@ -346,7 +348,7 @@ nnoremap <leader>gr :vsc Edit.FindAllReferences<CR>
 nnoremap <leader>gle :vsc Edit.GotoLastEditLocation<CR>
 nnoremap <leader>gtb :vsc Edit.GotoBraceExtend<CR>
 nnoremap <leader>gtsb :vsc ResourceExplorer.GoToSearchBar<CR>
-noremap <leader>gq :vsc Window.ActivateQuickLaunch<CR>
+nnoremap <leader>gq :vsc Window.ActivateQuickLaunch<CR>
 
 nnoremap <leader>db :vsc Debug.EnableBreakpoint<CR>
 
