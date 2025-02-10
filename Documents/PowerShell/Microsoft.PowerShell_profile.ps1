@@ -9,12 +9,12 @@ function x(){exit }
 " o k - keyboard help"
 function k()
 {
-  cd ~\kbgstuff\keymapper-4.9.1-win64
+  cd ~\kbgstuff\keymapper\keymapper-4.10.1
   ".\keymapperd.exe"
   & .\keymapperd.exe
   
-  ".\keymapper.exe -u -c .\keymapper.conf"
-  & .\keymapper.exe -u -c .\keymapper.conf
+  ".\keymapper.exe -u -c ..\keymapper.conf"
+  & .\keymapper.exe -u -c ..\keymapper.conf
 }
 
 " o kk - kill keyboard help"
